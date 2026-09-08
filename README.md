@@ -3,6 +3,11 @@
 Run **Scratch 3 (`.sb3`) projects natively in Python** — no web player, no
 Electron, no browser.
 
+> **Pre-release:** scratch.py is early software (v0.1.0). Most core blocks work,
+> but some blocks or edge cases may misbehave. If something breaks, please
+> [report an issue](https://github.com/MrRetroGamer/Scratch.Py/issues) — every
+> report makes the next release better.
+
 `.sb3` files are just ZIP archives containing `project.json` (the whole program:
 sprites, blocks, variables) plus content-addressed assets (`<md5>.png|svg|wav`).
 scratch.py parses that format and executes it with a faithful reimplementation
