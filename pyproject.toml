@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "scratch.py"
+version = "0.1.0"
+description = "Run Scratch 3 projects (.sb3) natively in Python"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "MrRet" }]
+dependencies = [
+    "pygame-ce>=2.5",
+    "numpy>=2.0",
+    "resvg-py>=0.3",
+]
+
+[project.optional-dependencies]
+svg = ["cairosvg>=2.7"]
+svg-pure = ["svglib>=2.0", "reportlab>=4.0", "rlPyCairo>=0.4", "pycairo>=1.26"]
+dev = ["pytest>=8", "ruff>=0.6"]
+
+[project.scripts]
+scratch-py = "scratch_py.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["scratch_py*"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]
