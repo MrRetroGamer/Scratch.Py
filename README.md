@@ -129,7 +129,9 @@ microphone).
 
 ## Contributing
 
-Contributions are welcome! Here's how to get set up and start.
+scratch.py is developed and maintained by a single person, **MrRet
+(MrRetroGamer)**, so help is genuinely appreciated — report bugs, fix opcodes,
+add tests, or improve docs. Here's how to get set up and start.
 
 ### 1. Clone and install
 
